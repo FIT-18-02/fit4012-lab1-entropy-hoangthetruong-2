@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Extended Euclidean Algorithm
 int extended_gcd(int a, int b, int &x, int &y) {
     if (b == 0) {
         x = 1;
@@ -18,11 +17,11 @@ int extended_gcd(int a, int b, int &x, int &y) {
 int mod_inverse(int a, int m) {
     int x, y;
     int g = extended_gcd(a, m, x, y);
-    if (g != 1) return -1; // không tồn tại
+    if (g != 1) return -1;
     return (x % m + m) % m;
 }
 
 int main() {
-    cout << mod_inverse(3, 11); // = 4
+    cout << mod_inverse(3, 7);
     return 0;
 }
