@@ -1,14 +1,22 @@
-# Run Log – FIT4012 Lab 1
+### Run Log
 
-## Entropy / Redundancy
-- [ ] Đã chạy với input `aaaa`
-- [ ] Đã chạy với input `abcd`
-- [ ] Đã chạy với input `hello world`
+#### Test 1
+Input: aaaa
+Entropy: 0
+Redundancy: 1
 
-## Modulo inverse
-- [ ] Đã chạy với `3 7`
-- [ ] Đã chạy với `10 17`
-- [ ] Đã chạy với `6 9`
+#### Test 2
+Input: abcd
+Entropy: 2
+Redundancy: 0
 
-## Điều em học được từ bài lab
-Viết 3-5 dòng ngắn gọn ở đây.
+#### Test 3
+Input: aabbcc
+Entropy: 1.585
+Redundancy: 0.21
+
+#### Test 4
+mod_inverse(3,7) = 5
+
+#### Test 5
+mod_inverse(6,9) = -1
