@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-// gcd
+// Giữ nguyên
 int gcd(int a, int b) {
     if (b == 0) return a;
     return gcd(b, a % b);
 }
 
-// extended euclid
+// Giữ nguyên
 int extended_euclid(int a, int b, int &x, int &y) {
     if (b == 0) {
         x = 1;
@@ -24,7 +24,7 @@ int extended_euclid(int a, int b, int &x, int &y) {
     return g;
 }
 
-// 👉 BẠN PHẢI VIẾT HÀM NÀY
+// 👉 HOÀN THIỆN HÀM NÀY
 int mod_inverse(int a, int m) {
     int x, y;
     int g = extended_euclid(a, m, x, y);
@@ -34,11 +34,4 @@ int mod_inverse(int a, int m) {
     }
 
     return (x % m + m) % m;
-}
-
-// test
-int main() {
-    cout << "mod_inverse(3,7) = " << mod_inverse(3,7) << endl;
-    cout << "mod_inverse(6,9) = " << mod_inverse(6,9) << endl;
-    return 0;
 }
