@@ -1,16 +1,16 @@
-# Test cases – FIT4012 Lab 1
+### Test Cases
 
-Đánh dấu [x] khi đã chạy và kiểm tra kết quả.
+1. Input: "aaaa"
+Expected entropy: 0
 
-## 1. Entropy / Redundancy
-- [x] Input: `aaaa` -> entropy thấp, redundancy cao
-- [x] Input: `abcd` -> entropy cao hơn `aaaa`
-- [x] Input: `hello world` -> entropy và redundancy được tính hợp lệ
+2. Input: "abcd"
+Expected entropy: 2
 
-## 2. Modulo inverse
-- [x] `a=3, m=7` -> nghịch đảo modulo là 5
-- [x] `a=10, m=17` -> nghịch đảo modulo là 12
-- [ ] `a=6, m=9` -> không tồn tại nghịch đảo modulo
+3. Input: "aabbcc"
+Expected entropy: ~1.58
 
-## 3. Ghi chú
-Thêm test riêng của nhóm nếu cần.
+4. mod_inverse(3,7)
+Expected: 5
+
+5. mod_inverse(6,9)
+Expected: -1
