@@ -36,3 +36,9 @@ double calculate_redundancy(const string &input) {
 
     return 1.0 - (H / H_max);
 }
+int main() {
+    string s = "abcd";
+    cout << calculate_entropy(s) << endl;
+    cout << calculate_redundancy(s) << endl;
+    return 0;
+}
