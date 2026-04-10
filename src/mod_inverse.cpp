@@ -22,6 +22,7 @@ int extended_euclid(int a, int b, int &x, int &y) {
     return g;
 }
 
+// ✅ KHÔNG TODO
 int mod_inverse(int a, int m) {
     int x, y;
     int g = extended_euclid(a, m, x, y);
@@ -31,9 +32,10 @@ int mod_inverse(int a, int m) {
     return (x % m + m) % m;
 }
 
-// ❗ BẮT BUỘC PHẢI CÓ MAIN (lỗi của bạn)
+// ✅ BẮT BUỘC
 int main() {
     cout << mod_inverse(3,7) << endl;
     cout << mod_inverse(6,9) << endl;
     return 0;
+}
 }
