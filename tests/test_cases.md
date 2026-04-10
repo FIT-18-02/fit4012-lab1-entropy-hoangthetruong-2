@@ -1,17 +1,31 @@
-# Test Cases
+# Test Cases cho Lab 01 - Entropy, Redundancy và Modular Inverse
 
-## Entropy & Redundancy
+## 1. Entropy & Redundancy Test Cases
 
-1. `aaaaaaa` → Entropy ≈ 0.0, Redundancy ≈ 1.0
-2. `abcd` → Entropy = 2.0, Redundancy ≈ 0.875
-3. `aabbccdd` → Entropy = 2.0, Redundancy ≈ 0.875
-4. `hello world` → Entropy ≈ 3.18, Redundancy ≈ 0.60
-5. `this is a test string for entropy calculation`
+**Test 1: Chuỗi lặp toàn bộ**  
+Chuỗi: `aaaa`  
+Entropy mong đợi: ≈ 0.0  
+Redundancy mong đợi: ≈ 100% (hoặc rất cao)
 
-## Modular Inverse
+**Test 2: Chuỗi đa dạng hoàn toàn**  
+Chuỗi: `abcd`  
+Entropy mong đợi: 2.0 bits  
+Redundancy mong đợi: 0% (với 4 ký tự duy nhất)
 
-- `mod_inverse(3,7)` = **5** (vì 3*5 = 15 ≡ 1 mod 7)
-- `mod_inverse(6,9)` = **Không tồn tại** (gcd(6,9)=3 ≠ 1)
-- `mod_inverse(5,11)` = **9**
-- `mod_inverse(7,26)` = **15**
-- `mod_inverse(10,17)` = **12**
+**Test 3: Chuỗi có lặp và không lặp**  
+Chuỗi: `aabbccdde`  
+Entropy mong đợi: khoảng 2.5 - 3.0 bits  
+Redundancy: trung bình
+
+**Test 4: Chuỗi thực tế**  
+Chuỗi: `hello world`  
+Entropy và Redundancy: có lặp ký tự (l, o, space)
+
+## 2. Modular Inverse Test Cases
+
+**Test 5: Có tồn tại nghịch đảo**  
+mod_inverse(3, 7) = 5  
+(Kiểm tra: 3 * 5 = 15 ≡ 1 mod 7)
+
+**Test 6: Không tồn tại nghịch đảo**  
+mod_inverse(6, 9) = không tồn tại (vì gcd(6,9) = 3 ≠ 1)
