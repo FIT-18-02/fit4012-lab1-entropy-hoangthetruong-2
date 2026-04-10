@@ -1,7 +1,19 @@
-## Run Log
+# Run Log - Lab 01
 
-- [x] Test 1: aaaa → entropy = 0, redundancy = 1
-- [x] Test 2: abcd → entropy = 2, redundancy = 0
-- [x] Test 3: aabbcc → entropy ≈ 1.585, redundancy ≈ 0.21
-- [x] Test 4: mod_inverse(3,7) = 5
-- [x] Test 5: mod_inverse(6,9) = -1
+## Kết quả chạy entropy_redundancy
+
+- [x] Chạy với chuỗi "aaaa"
+- [x] Chạy với chuỗi "abcd"
+- [x] Chạy với chuỗi "aabbccdd"
+- [x] Chạy với chuỗi "hello world"
+- [x] Chạy với chuỗi "this is a test string with repetition"
+
+## Kết quả chạy mod_inverse
+
+- [x] mod_inverse(3, 7) = 5
+- [x] mod_inverse(6, 9) = -1 (không tồn tại)
+- [x] mod_inverse(5, 11) = 9
+- [x] mod_inverse(2, 5) = 3
+
+## Tổng kết
+Điều em học được từ bài lab: Hiểu cách tính entropy và redundancy của chuỗi, cũng như cách tìm nghịch đảo modulo bằng Extended Euclidean algorithm.
