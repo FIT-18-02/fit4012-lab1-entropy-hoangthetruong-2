@@ -1,4 +1,4 @@
-### Test Cases
+## Test Cases
 
 1. Input: "aaaa"
 Expected entropy: 0
@@ -13,4 +13,4 @@ Expected entropy: ~1.58
 Expected: 5
 
 5. mod_inverse(6,9)
-Expected: -1
+Expected: -1 (không tồn tại)
