@@ -4,13 +4,10 @@
 #include <set>
 using namespace std;
 
-// Tính entropy
 double calculate_entropy(const string &input) {
     map<char, int> freq;
 
-    for (char c : input) {
-        freq[c]++;
-    }
+    for (char c : input) freq[c]++;
 
     double entropy = 0.0;
     int n = input.length();
@@ -23,7 +20,7 @@ double calculate_entropy(const string &input) {
     return entropy;
 }
 
-// 👉 BỔ SUNG HÀM NÀY
+// ✅ KHÔNG ĐỂ TODO NỮA
 double calculate_redundancy(const string &input) {
     double H = calculate_entropy(input);
 
@@ -36,6 +33,8 @@ double calculate_redundancy(const string &input) {
 
     return 1.0 - (H / H_max);
 }
+
+// ✅ BẮT BUỘC PHẢI CÓ
 int main() {
     string s = "abcd";
     cout << calculate_entropy(s) << endl;
