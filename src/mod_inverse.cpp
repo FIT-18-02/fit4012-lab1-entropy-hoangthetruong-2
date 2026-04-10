@@ -1,24 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int extended_gcd(int a, int b, int &x, int &y) {
-    if (b == 0) {
-        x = 1;
-        y = 0;
-        return a;
-    }
-    int x1, y1;
-    int gcd = extended_gcd(b, a % b, x1, y1);
-    x = y1;
-    y = x1 - (a / b) * y1;
-    return gcd;
-}
-
 int mod_inverse(int a, int m) {
-    int x, y;
-    int g = extended_gcd(a, m, x, y);
-    if (g != 1) return -1;
-    return (x % m + m) % m;
+    int m0 = m, t, q;
+    int x0 = 0, x1 = 1;
+
+    if (m == 1) return -1;
+
+    while (a > 1) {
+        if (m == 0) return -1;
+        q = a / m;
+        t = m;
+
+        m = a % m;
+        a = t;
+        t = x0;
+
+        x0 = x1 - q * x0;
+        x1 = t;
+    }
+
+    if (a != 1) return -1;
+
+    if (x1 < 0) x1 += m0;
+    return x1;
 }
 
 int main() {
